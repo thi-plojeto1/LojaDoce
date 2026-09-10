@@ -33,10 +33,10 @@
             lblQuantidade = new Label();
             butCalcular = new Button();
             lblIdadeCliente = new Label();
-            textNomeDoce = new TextBox();
-            textIdadeCliente = new TextBox();
-            textQuantidade = new TextBox();
-            textPrecoUnitario = new TextBox();
+            txtNomeDoce = new TextBox();
+            txtIdadeCliente = new TextBox();
+            txtQuantidade = new TextBox();
+            txtPrecoUnitario = new TextBox();
             lblNome = new Label();
             lblDesconto = new Label();
             lblParcela = new Label();
@@ -52,6 +52,7 @@
             lblNomeDoce.Size = new Size(70, 15);
             lblNomeDoce.TabIndex = 0;
             lblNomeDoce.Text = "Nome Doce";
+            lblNomeDoce.Click += lblNomeDoce_Click;
             // 
             // lblPrecoUnitario
             // 
@@ -61,6 +62,7 @@
             lblPrecoUnitario.Size = new Size(82, 15);
             lblPrecoUnitario.TabIndex = 1;
             lblPrecoUnitario.Text = "Preço Unitário";
+            lblPrecoUnitario.Click += lblPrecoUnitario_Click;
             // 
             // lblQuantidade
             // 
@@ -79,6 +81,7 @@
             butCalcular.TabIndex = 3;
             butCalcular.Text = "Calcular";
             butCalcular.UseVisualStyleBackColor = true;
+            butCalcular.Click += butCalcular_Click;
             // 
             // lblIdadeCliente
             // 
@@ -89,33 +92,33 @@
             lblIdadeCliente.TabIndex = 4;
             lblIdadeCliente.Text = "Idade Cliente";
             // 
-            // textNomeDoce
+            // txtNomeDoce
             // 
-            textNomeDoce.Location = new Point(420, 1);
-            textNomeDoce.Name = "textNomeDoce";
-            textNomeDoce.Size = new Size(100, 23);
-            textNomeDoce.TabIndex = 5;
+            txtNomeDoce.Location = new Point(420, 1);
+            txtNomeDoce.Name = "txtNomeDoce";
+            txtNomeDoce.Size = new Size(100, 23);
+            txtNomeDoce.TabIndex = 5;
             // 
-            // textIdadeCliente
+            // txtIdadeCliente
             // 
-            textIdadeCliente.Location = new Point(420, 130);
-            textIdadeCliente.Name = "textIdadeCliente";
-            textIdadeCliente.Size = new Size(100, 23);
-            textIdadeCliente.TabIndex = 6;
+            txtIdadeCliente.Location = new Point(420, 130);
+            txtIdadeCliente.Name = "txtIdadeCliente";
+            txtIdadeCliente.Size = new Size(100, 23);
+            txtIdadeCliente.TabIndex = 6;
             // 
-            // textQuantidade
+            // txtQuantidade
             // 
-            textQuantidade.Location = new Point(420, 82);
-            textQuantidade.Name = "textQuantidade";
-            textQuantidade.Size = new Size(100, 23);
-            textQuantidade.TabIndex = 7;
+            txtQuantidade.Location = new Point(420, 82);
+            txtQuantidade.Name = "txtQuantidade";
+            txtQuantidade.Size = new Size(100, 23);
+            txtQuantidade.TabIndex = 7;
             // 
-            // textPrecoUnitario
+            // txtPrecoUnitario
             // 
-            textPrecoUnitario.Location = new Point(420, 42);
-            textPrecoUnitario.Name = "textPrecoUnitario";
-            textPrecoUnitario.Size = new Size(100, 23);
-            textPrecoUnitario.TabIndex = 8;
+            txtPrecoUnitario.Location = new Point(420, 42);
+            txtPrecoUnitario.Name = "txtPrecoUnitario";
+            txtPrecoUnitario.Size = new Size(100, 23);
+            txtPrecoUnitario.TabIndex = 8;
             // 
             // lblNome
             // 
@@ -174,10 +177,10 @@
             Controls.Add(lblParcela);
             Controls.Add(lblDesconto);
             Controls.Add(lblNome);
-            Controls.Add(textPrecoUnitario);
-            Controls.Add(textQuantidade);
-            Controls.Add(textIdadeCliente);
-            Controls.Add(textNomeDoce);
+            Controls.Add(txtPrecoUnitario);
+            Controls.Add(txtQuantidade);
+            Controls.Add(txtIdadeCliente);
+            Controls.Add(txtNomeDoce);
             Controls.Add(lblIdadeCliente);
             Controls.Add(butCalcular);
             Controls.Add(lblQuantidade);
@@ -185,6 +188,7 @@
             Controls.Add(lblNomeDoce);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -196,10 +200,10 @@
         private Label lblQuantidade;
         private Button butCalcular;
         private Label lblIdadeCliente;
-        private TextBox textNomeDoce;
-        private TextBox textIdadeCliente;
-        private TextBox textQuantidade;
-        private TextBox textPrecoUnitario;
+        private TextBox txtNomeDoce;
+        private TextBox txtIdadeCliente;
+        private TextBox txtQuantidade;
+        private TextBox txtPrecoUnitario;
         private Label lblNome;
         private Label lblDesconto;
         private Label lblParcela;
